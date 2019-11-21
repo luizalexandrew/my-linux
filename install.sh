@@ -1,105 +1,106 @@
-#!/usr/bin/env bash
-# ----------------------------- VARIÁVEIS ----------------------------- #
-PPA_LIBRATBAG="ppa:libratbag-piper/piper-libratbag-git"
-PPA_LUTRIS="ppa:lutris-team/lutris"
-PPA_GRAPHICS_DRIVERS="ppa:graphics-drivers/ppa"
-
-URL_WINE_KEY="https://dl.winehq.org/wine-builds/winehq.key"
-URL_PPA_WINE="https://dl.winehq.org/wine-builds/ubuntu/"
-URL_GOOGLE_CHROME="https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"
-URL_SIMPLE_NOTE="https://github.com/Automattic/simplenote-electron/releases/download/v1.8.0/Simplenote-linux-1.8.0-amd64.deb"
-URL_4K_VIDEO_DOWNLOADER="https://dl.4kdownload.com/app/4kvideodownloader_4.9.2-1_amd64.deb"
-URL_INSYNC="https://d2t3ff60b2tol4.cloudfront.net/builds/insync_3.0.20.40428-bionic_amd64.deb"
-
-DIRETORIO_DOWNLOADS="$HOME/Downloads/programas"
-
-PROGRAMAS_PARA_INSTALAR=(
-  snapd
-  mint-meta-codecs
-  winff
-  guvcview
-  virtualbox
-  flameshot
-  nemo-dropbox
-  steam-installer
-  steam-devices
-  steam:i386
-  ratbagd
-  piper
-  lutris
-  libvulkan1
-  libvulkan1:i386
-  libgnutls30:i386
-  libldap-2.4-2:i386
-  libgpg-error0:i386
-  libxml2:i386
-  libasound2-plugins:i386
-  libsdl2-2.0-0:i386
-  libfreetype6:i386
-  libdbus-1-3:i386
-  libsqlite3-0:i386
-)
-# ---------------------------------------------------------------------- #
-
-# ----------------------------- REQUISITOS ----------------------------- #
 ## Removendo travas eventuais do apt ##
-sudo rm /var/lib/dpkg/lock-frontend
-sudo rm /var/cache/apt/archives/lock
+rm /var/lib/dpkg/lock-frontend
+rm /var/cache/apt/archives/lock
+export PATH=/sbin:/bin:/usr/bin:/usr/sbin:/usr/local/sbin:/usr/local/bin #debian
 
 ## Adicionando/Confirmando arquitetura de 32 bits ##
-sudo dpkg --add-architecture i386
+dpkg --add-architecture i386
+## Update Source.list ##
+apt update -y
 
-## Atualizando o repositório ##
-sudo apt update -y
 
-## Adicionando repositórios de terceiros e suporte a Snap (Driver Logitech, Lutris e Drivers Nvidia)##
-sudo apt-add-repository "$PPA_LIBRATBAG" -y
-sudo add-apt-repository "$PPA_LUTRIS" -y
-sudo apt-add-repository "$PPA_GRAPHICS_DRIVERS" -y
-wget -nc "$URL_WINE_KEY"
-sudo apt-key add winehq.key
-sudo apt-add-repository "deb $URL_PPA_WINE bionic main"
-# ---------------------------------------------------------------------- #
+echo "* Executando Instalações"
 
-# ----------------------------- EXECUÇÃO ----------------------------- #
-## Atualizando o repositório depois da adição de novos repositórios ##
-sudo apt update -y
+echo "- Instalando dependências"
 
-## Download e instalaçao de programas externos ##
+echo "(SNAPD)"
+apt-get install snapd -y
+echo "(BUILD ESSENTIAL)"
+apt install build-essential -y
+
+echo "- Instalando APT"
+
+echo "(python)"
+apt-get install python3 python3-pip -y
+apt-get install python3-numpy python3-matplotlib python3-scipy python3-pandas python3-simpy -y
+apt-get install ipython3 -y
+echo "(inkscape)"
+apt-get install inkscape -y
+echo "(gimp)"
+apt-get install gimp -y 
+echo "(vlc)"
+apt-get install vlc -y 
+echo "(transmission)"
+apt-get install transmission -y
+echo "(gdebi)"
+apt-get install gdebi -y
+echo "(gnome-tweak-tool)"
+apt-get install gnome-tweak-tool -y
+echo "(kdeconnect)"
+apt-get install kdeconnect -y
+echo "(git)"
+apt-get install git --install-suggests -y
+#  git-daemon-run | git-daemon-sysvinit git-doc git-el git-email git-gui gitk gitweb git-cvs git-mediawiki git-svn
+
+echo "(synaptic)"
+apt install synaptic -y
+echo "(libs)"
+apt-get install --install-suggests arc arj cabextract lhasa p7zip p7zip-full p7zip-rar rar unrar unace unzip xz-utils zip libavcodec-extra -y
+echo "(tor)"
+apt install tor apt-transport-https -y
+echo "(flameshot)"
+apt install flameshot -y
+echo "(curl)"
+apt install curl -y
+
+echo "- Corrigindo dependências"
+apt-get install -f -y
+
+
+echo "- Instalando SNAPS"
+
+echo "(keepassxc)"
+snap install keepassxc
+echo "(spotify)"
+snap install spotify
+echo "(insomnia)"
+snap install insomnia
+echo "(snap-store)"
+snap install snap-store
+#echo "(kdenlive)"
+#snap install kdenlive
+echo "(ffmpeg)"
+snap install ffmpeg
+
+echo "- Baixando pacotes DEB"
+echo "? - Em qual usuário os donwloads vão ser realizados?"
+read USER
+DIRETORIO_DOWNLOADS="/home/$USER/Downloads/programas"
+
+URLS_DEB=(
+    "https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb" #Google Chrome
+    "https://az764295.vo.msecnd.net/stable/8795a9889db74563ddd43eb0a897a2384129a619/code_1.40.1-1573664190_amd64.deb" #VSCode
+    "https://release.axocdn.com/linux/GitKraken-v5.0.4.deb"
+    "https://download1.operacdn.com/pub/opera/desktop/65.0.3467.48/linux/opera-stable_65.0.3467.48_amd64.deb" #opera
+    "https://autoupdate.termius.com/linux/Termius.deb" #Thermius
+)
+
 mkdir "$DIRETORIO_DOWNLOADS"
-wget -c "$URL_GOOGLE_CHROME"       -P "$DIRETORIO_DOWNLOADS"
-wget -c "$URL_SIMPLE_NOTE"         -P "$DIRETORIO_DOWNLOADS"
-wget -c "$URL_4K_VIDEO_DOWNLOADER" -P "$DIRETORIO_DOWNLOADS"
-wget -c "$URL_INSYNC"              -P "$DIRETORIO_DOWNLOADS"
 
-## Instalando pacotes .deb baixados na sessão anterior ##
-sudo dpkg -i $DIRETORIO_DOWNLOADS/*.deb
-
-# Instalar programas no apt
-for nome_do_programa in ${PROGRAMAS_PARA_INSTALAR[@]}; do
-  if ! dpkg -l | grep -q $nome_do_programa; then # Só instala se já não estiver instalado
-    apt install "$nome_do_programa" -y
-  else
-    echo "[INSTALADO] - $nome_do_programa"
-  fi
+for url_programa in ${URLS_DEB[@]}; do
+    wget -c "$url_programa" -P "$DIRETORIO_DOWNLOADS"
 done
 
-sudo apt install --install-recommends winehq-stable wine-stable wine-stable-i386 wine-stable-amd64 -y
+## Download e instalaçao de programas externos ##
 
-## Instalando pacotes Flatpak ##
-flatpak install flathub com.obsproject.Studio -y
+echo "- Instalando pacotes DEB"
+dpkg -i $DIRETORIO_DOWNLOADS/*.deb
 
-## Instalando pacotes Snap ##
-sudo snap install spotify
-sudo snap install slack --classic
-sudo snap install skype --classic
-sudo snap install photogimp
-# ---------------------------------------------------------------------- #
+echo "- Corrigindo dependências"
 
-# ----------------------------- PÓS-INSTALAÇÃO ----------------------------- #
-## Finalização, atualização e limpeza##
-sudo apt update && sudo apt dist-upgrade -y
-flatpak update
-sudo apt autoclean
-sudo apt autoremove -y
-# ---------------------------------------------------------------------- #
+apt install -f -y
+apt autoclean -y 
+apt autoremove -y
+
+rm -r $DIRETORIO_DOWNLOADS
+
