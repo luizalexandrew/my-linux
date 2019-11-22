@@ -1,3 +1,5 @@
+#!/bin/bash
+
 echo "Executando Script"
 chmod +x *.sh
 

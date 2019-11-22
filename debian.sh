@@ -1,3 +1,4 @@
+#!/bin/bash
 
 echo "* Executando configurações do Debian"
 

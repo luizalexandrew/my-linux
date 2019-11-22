@@ -1,3 +1,4 @@
+#!/bin/bash
 
 echo "* Instalando MySQL e Workbench"
 

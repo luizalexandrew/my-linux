@@ -1,3 +1,5 @@
+#!/bin/bash
+
 echo "* Atualizando source list"
 apt install wget apt-transport-https dirmngr -y
 

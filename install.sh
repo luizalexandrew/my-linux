@@ -1,3 +1,5 @@
+#!/bin/bash
+
 ## Removendo travas eventuais do apt ##
 rm /var/lib/dpkg/lock-frontend
 rm /var/cache/apt/archives/lock
