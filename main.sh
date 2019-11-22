@@ -3,3 +3,5 @@ chmod +x *.sh
 
 ./debian.sh
 ./install.sh
+./mysql.sh
+
