@@ -62,8 +62,6 @@ snap install postman
 echo "(ffmpeg)"
 snap install ffmpeg
 
-
-
 echo "? - Instalar o Gnome Tools? s/n"
 
 read INSTALLGNOMETOOLS 
