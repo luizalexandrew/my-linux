@@ -11,3 +11,9 @@ deb-src http://deb.debian.org/debian/ testing-updates main contrib non-free
 
 deb http://deb.debian.org/debian-security testing-security main
 deb-src http://deb.debian.org/debian-security testing-security main
+
+deb http://repo.mysql.com/apt/debian/ buster mysql-apt-config
+deb http://repo.mysql.com/apt/debian/ buster mysql-8.0
+deb http://repo.mysql.com/apt/debian/ buster mysql-tools
+deb http://repo.mysql.com/apt/debian/ buster mysql-tools-preview
+deb-src http://repo.mysql.com/apt/debian/ buster mysql-8.0

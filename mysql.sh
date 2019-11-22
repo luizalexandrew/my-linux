@@ -4,26 +4,6 @@ echo "* Instalando MySQL e Workbench"
 apt update
 apt install gnupg
 
-
-echo "- Escrevendo no Sources.list"
-echo "? - Deseja instalar atualizar o Sources.list?"
-
-read UPDATESORCESLIST
- 
-if [ "$UPDATESORCESLIST" == 's' ]
-then
-
-    echo "deb http://repo.mysql.com/apt/debian/ buster mysql-apt-config">>/etc/apt/sources.list
-    echo "deb http://repo.mysql.com/apt/debian/ buster mysql-8.0">>/etc/apt/sources.list
-    echo "deb http://repo.mysql.com/apt/debian/ buster mysql-tools">>/etc/apt/sources.list
-    echo "deb http://repo.mysql.com/apt/debian/ buster mysql-tools-preview">>/etc/apt/sources.list
-    echo "deb-src http://repo.mysql.com/apt/debian/ buster mysql-8.0">>/etc/apt/sources.list
-
-    echo "- Update Sources.list"
-
-    apt-get update
-fi
-
 echo "? - Deseja instalar o MYSQL?"
 
 read INSTALLMYSQL
@@ -39,9 +19,6 @@ then
     mysql_secure_installation
 
 fi
-
-
-
 
 echo "#########################################################"
 echo "   Teste o MySQL checando se foi instalado com sucesso"
