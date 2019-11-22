@@ -14,18 +14,18 @@ fi
 
 echo "? - Quer instalar os programas? s/n"
 
-read CONFIGUREDEBIAN 
+read INSTALARPROGRAMAS 
 
-if [ "$CONFIGUREDEBIAN" == 's' ]
+if [ "$INSTALARPROGRAMAS" == 's' ]
 then
     ./install.sh
 fi
 
 echo "? - Quer instalar os MySQL? s/n"
 
-read CONFIGUREDEBIAN 
+read INSTALARMYSLQL 
 
-if [ "$CONFIGUREDEBIAN" == 's' ]
+if [ "$INSTALARMYSLQL" == 's' ]
 then
     ./mysql.sh
 fi
