@@ -3,4 +3,16 @@ alias lh = python -m SimpleHTTPServer 9000
 alias start = npm start
 
 
+alias octopus=""
+alias site=""
+alias stark=""
+alias esparta=""
+alias lenister=""
+
+alias rabbit="docker run -it --rm --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:3-management"
+alias rurax="sudo openvpn --config ~/Documents/vpn/config.ovpn"
+
+
+
+
 
