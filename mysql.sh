@@ -31,15 +31,3 @@ echo "sudo mysql"
 echo "GRANT ALL PRIVILEGES ON *.* TO 'admin'@'localhost' IDENTIFIED BY 'Senha'"
 echo "exit;"
 echo "----------------------------------------------"
-
-echo "? - Deseja instalar o Workbench?"
-
-read INSTALLWORKBENCH
- 
-if [ "$INSTALLWORKBENCH" == 's' ]
-then
-    wget -O workbench.deb https://cdn.mysql.com//Downloads/MySQLGUITools/mysql-workbench-community_8.0.16-1ubuntu18.04_amd64.deb
-    dpkg -i workbench.deb
-    apt-get install -f -y
-    rm -r workbench.deb
-fi
