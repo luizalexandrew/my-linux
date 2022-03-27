@@ -2,23 +2,20 @@
 
 # #https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-debian-10
 
-# curl -sL https://deb.nodesource.com/setup_12.x -o nodesource_setup.sh
-# chmod +x nodesource_setup.sh
-# bash nodesource_setup.sh
-# apt install nodejs
-# node -v
-# apt install build-essential
+apt-get install curl -y
+curl -sL https://deb.nodesource.com/setup_16.x -o nodesource_setup.sh
+chmod +x nodesource_setup.sh
+bash nodesource_setup.sh
+apt install nodejs
+node -v
+apt install build-essential -y
 
-# curl -sL https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh -o install_nvm.sh
-# bash install_nvm.sh
-# source ~/.profile
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+source ~/.profile
 
-# rm -r nodesource_setup.sh
-# rm -r install_nvm.sh
+rm -r nodesource_setup.sh
+rm -r install_nvm.sh
 
-# clear
-# nvm install 12.13.1
-# nvm use 12.13.1
 
 # echo "###### PARA MUDAR NO SEU USUARIO #################"
 # echo "nvm use 10.16.2"
