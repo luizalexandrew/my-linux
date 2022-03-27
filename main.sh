@@ -3,7 +3,7 @@
 echo "Executando Script"
 chmod +x *.sh
 
-echo "? - Quer configurar o Debian 10? s/n"
+echo "? - Quer configurar o Debian? s/n"
 
 read CONFIGUREDEBIAN 
 
