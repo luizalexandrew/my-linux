@@ -1,0 +1,180 @@
+wpa_passphrase {SSD} {PASS} >> /etc/wpa_supplicant.conf
+
+//Para ver os adaptadores de rede basta usar o copando ip
+
+/sbin/wpa_supplicant -u -s -c /etc/wpa_supplicant.conf -i wlp60s0
+systemctl daemon-reload
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1  iw
+    2  nmcli
+    3  iwctl
+    4  nano /etc/apt/sources.list
+    5  apt-get install wpa_supplicant
+    6  apt-get install wpa_*
+    7  iw
+    8  sudo wpa_supplicant
+    9  nmcli
+   10  nmcli
+   11  scan
+   12  set_network
+   13  dhclient
+   14  iwctl
+   15  nmcli
+   16  apt-get install wpasupplicant
+   17  wpasupplicant
+   18  wpa_passphrase -help
+   19  wpa_p
+   20  wpa_passphrase -help
+   21  wpa_passphrase -help
+   22  ls
+   23  rm -r wpa.conf 
+   24  echo 'network={ssid="MaLu" psk="Windows@10"}' >> /etc/wpa_supplicant.conf
+   25  echo 'network={ssid="MaLu" psk="Windows@10"}' >> /etc/wpa_supplicant/wpa_supplicant.conf
+   26  wpa_supplicant
+   27  iwctl
+   28  wpasupplicant
+   29  reboot
+   30  systemctl reboot
+   31  apt update
+   32  /sbin/dhclient wlp60s0
+   33  apt update]
+   34  apt update
+   35  apt-get install gnome-session
+   36  wpasupplicant
+   37  apt install wpsupplicant
+   38  apt install wpasupplicant
+   39  /sbin/wpa_cli
+   40  iw
+   41  /sbin/wpa_cli MaLu Windows@10
+   42  /sbin/wpa_cli --help
+   43  /sbin/wpa_cli -help
+   44  /sbin/wpa_supplicant -B -i interface -c /etc/wpa_supplicant.conf 
+   45  ------------------------
+   46  wpa_passphrase 
+   47  /sbin/wpa_supplicant -B -i interface -c /etc/wpa_supplicant.conf 
+   48  wpa_passphrase MaLu Windows@10 >> /etc/wpa_supplicant.conf 
+   49  wpa_passphrase MaLu Windows@10 >> /etc/wpa_supplicant/wpa_supplicant.conf 
+   50  nano /etc/wpa_supplicant/wpa_supplicant.conf 
+   51  /sbin/wpa_supplicant -B -i interface -c /etc/wpa_supplicant.conf 
+   52  /sbin/wpa_supplicant -B -c /etc/wpa_supplicant.conf 
+   53  /sbin/wpa_supplicant -B -c /etc/wpa_supplicant.conf i wlp60s0
+   54  ./sbin/wpa_suip
+   55  ip
+   56  ip a
+   57  /sbin/wpa_supplicant -B -c /etc/wpa_supplicant.conf -i wlp60s0
+   58  apt-get update
+   59  /sbin/dhclient wlp60s0
+   60  /sbin/dhclient wlp60s0 -r
+   61  ip addr show wlp60s0
+   62  /sbin/iwconfig 
+   63  /sbin/
+   64  /sbin/iw
+   65  /sbin/
+   66  /sbin/wpa_supplicant -c /etc/wpa_supplicant.conf -i wlp60s0
+   67  nano /etc/wpa_supplicant.conf 
+   68  /sbin/wpa_supplicant -c /etc/wpa_supplicant.conf -i wlp60s0
+   69  apt-get update
+   70  /sbin/wpa_supplicant -B /etc/wpa_supplicant.conf -i wlp60s0
+   71  /sbin/wpa_supplicant -u -s -c /etc/wpa_supplicant.conf -i wlp60s0
+   72  apt-get update
+   73  /sbin/wpa_supplicant -c /etc/wpa_supplicant.conf -i wlp60s0
+   74  nano /etc/wpa_supplicant.conf 
+   75  /sbin/wpa_supplicant -c /etc/wpa_supplicant.conf -i wlp60s0
+   76  /sbin/wpa_supplicant -u -s -c /etc/wpa_supplicant.conf -i wlp60s0
+   77  apt update
+   78  /sbin/wpa_supplicant -u -s -O /etc/wpa_supplicant.conf -i wlp60s0
+   79  apt update
+   80  apt update
+   81  /sbin/wpa_supplicant -u -s -c /etc/wpa_supplicant.conf -i wlp60s0
+   82  systemctl daemon-reload
+   83  apt update
+   84  /sbin/wpa_supplicant -c /etc/wpa_supplicant.conf -i wlp60s0
+   85  /sbin/wpa_supplicant -c /etc/wpa_supplicant.conf -i wlp60s0
+   86  history
+   87  apt-get update
+   88  apt-get install gnome-session
+   89  apt-get install gm3
+   90  ls
+   91  apt-get install git
+   92  apt-get install git
+   93  apt install git
+   94  git
+   95  apt install git
+   96  apt-get update
+   97  nano /etc/apt/sources.list
+   98  apt update
+   99  wget http://google.com
+  100  wget http://google.com
+  101  ls
+  102  wget https://google.com
+  103  wget
+  104  wget https://sofalta.eu
+  105  reboot
+  106  system reboot
+  107  systemctl reboot
+  108  apt update
+  109  apt update
+  110  cd /home/luizalexandrew/Downloads/
+  111  dpkg -i programas/google-chrome-stable_current_amd64.deb 
+  112  dpkg -i programas/google-chrome-stable_current_amd64.deb 
+  113  snap install keepassxc
+  114  sudo systemctl restart snapd snapd.socket
+  115  exit
+  116  ./main.sh 
+  117  apt install snapd
+  118  snap install keepassxc
+  119  wget https://google.com
+  120  ./main.sh 
+  121  ./main.sh 
+  122  mysql
+  123  apt install mysql-server
+  124  ls
+  125  cd ../Downloads/programas/
+  126  dpkg i google-chrome-stable_current_amd64.deb 
+  127  dpkg -i google-chrome-stable_current_amd64.deb 
+  128  su -
+  129  exit
+  130  apt-get install gnome-terminal
+  131  apt update
+  132  apt install git
+  133  git
+  134  apt install gnome-terminal
+  135  apt install gnome-terminal nautilus -y
+  136  snap install keepassxc
+  137  ls
+  138  nano install.sh 
+  139  git status
+  140  git add .
+  141  git status
+  142  git commit -m "update"
+  143  git config --global user.email "luizalexandredev@gmail.com"
+  144  git config --global user.name "luizalexandrew"
+  145  git commit -m "update"
+  146  git push
+  147  git push
+  148  git diff
+  149  git status
+  150  nano install.sh 
+  151  reboot
+  152  su
+  153  ls
+  154  history
+  155  ls
+  156  nano debian.sh 
+  157  su
+  158  history
+root@g5:/home/luizalexandre
