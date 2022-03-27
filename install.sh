@@ -41,6 +41,20 @@ echo "(synaptic)"
 apt install synaptic -y
 echo "(libs)"
 apt-get --install-suggests install libssl-dev net-tools arc arj cabextract lhasa p7zip p7zip-full p7zip-rar rar unrar unace unzip xz-utils zip libavcodec-extra -y
+apt-get install gzip tar -y
+
+apt-get install build-essential cmake cmake-data autoconf automake pkg-config libtool libzip-dev libxml2-dev libsigc++-2.0-dev libglade2-dev libglu1-mesa-dev libgl1-mesa-glx mesa-common-dev libmysqlclient-dev libmysqlcppconn-dev uuid-dev libpixman-1-dev libpcre3-dev libpango1.0-dev libcairo2-dev python-dev libboost-dev mysql-client python-pysqlite2 libsqlite3-dev swig libvsqlitepp-dev libgdal-dev libgtk-3-dev libgtkmm-3.0-dev libssl-dev libsecret-1-dev libproj-dev
+
+echo "- Instalando GNOME Vanilha"
+
+apt-get install gnome-session -y
+apt-get install gnome-terminal -y
+apt-get install gdm3 -y
+apt-get install nautilus -y
+
+apt-get install podman -y
+
+apt-get autoremove -y
 
 echo "- Corrigindo dependências"
 apt-get install -f -y
@@ -65,7 +79,7 @@ read INSTALLGNOMETOOLS
 if [ "$INSTALLGNOMETOOLS" == 's' ]
 then
     echo "(gnome-tweak-tool)"
-    apt-get install gnome-tweak-tool -y
+    apt-get install gnome-shell-extension-prefs -y
 fi
 
 echo "- Baixando pacotes DEB"
