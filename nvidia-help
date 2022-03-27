@@ -1,0 +1,55 @@
+161  sudo apt install nvidia-detect
+  162  sudo nvidia-detect
+  163  sudo apt-get install nvidia-driver
+  164  systemctl reboot
+  165  sudo su
+  166  nvidia-settings 
+  167  sudo nvidia-settings 
+  168  nvidia-smi
+  169  lsmod
+  170  sudo add-apt-repository ppa:graphics-drivers/ppa --yes
+  171  modinfo nvidia
+  172  apt-get install modinfo
+  173  sudo apt-get install modinfo
+  174  prime-select query
+  175  nvidia-smi
+  176  modinfo
+  177  lsmod | grep nvidia
+  178  lsmod 
+  179  lsmod | grep nvidia
+  180  apt -y install linux-headers-$(uname -r) build-essential libglvnd-dev pkg-config
+  181  sudo apt -y install linux-headers-$(uname -r) build-essential libglvnd-dev pkg-config
+  182  nvidia-detect 
+  183  sudo apt install nvidia-driver
+  184  nvidia-driver
+  185  sudo nvidia-detect 
+  186  sudo apt install nvidia-driver
+  187  sudo apt -y install linux-headers-$(uname -r) build-essential libglvnd-dev pkg-config
+  188  sudo nvidia-detect 
+  189  apt install nvidia-legacy-470xx-driver
+  190  sudo apt install nvidia-legacy-470xx-driver
+  191  sudo nvidia-detect 
+  192  cd Downloads/
+  193  bash NVIDIA-Linux-x86_64-510.60.02.run 
+  194  sudo bash NVIDIA-Linux-x86_64-510.60.02.run 
+  195  sudo su
+  196  nano /etc/modprobe.d/blacklist.conf
+  197  sudo nano /etc/modprobe.d/blacklist.conf
+  198  su
+  199  ls
+  200  history
+  201  systemctl set-default graphical.target 
+  202  systemctl reboot
+
+
+
+
+
+  GNU nano 6.2                        /etc/modprobe.d/blacklist.conf                                  
+blacklist nouveau
+
+
+
+
+
+
