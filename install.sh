@@ -37,6 +37,9 @@ echo "(git)"
 apt-get install git -y
 echo "(synaptic)"
 apt install synaptic -y
+echo "(libreoffice)"
+apt install libreoffice -y
+
 echo "(libs)"
 apt-get --install-suggests install libssl-dev net-tools arc arj cabextract lhasa p7zip p7zip-full p7zip-rar rar unrar unace unzip xz-utils zip libavcodec-extra -y
 apt-get install gzip tar -y
@@ -50,7 +53,7 @@ apt-get install gnome-terminal -y
 apt-get install gdm3 -y
 apt-get install nautilus -y
 
-apt-get install -y gnome-applets gnome-applets-data gnome-audio gnome-bluetooth gnome-bluetooth-3-common gnome-boxes gnome-disk-utility gnome-brave-icon-theme gnome-extra-icons  gnome-human-icon-theme gnome-applets gnome-applets-data gnome-audio gnome-bluetooth gnome-bluetooth-3-common gnome-boxes gnome-nettool  gnome-screenshot gnome-text-editor gnome-tweaks gnome-software gnome-software-common gnome-software-plugin-snap
+apt-get install -y gnome-applets gnome-applets-data gnome-audio gnome-bluetooth gnome-bluetooth-3-common gnome-boxes gnome-disk-utility gnome-brave-icon-theme gnome-extra-icons  gnome-human-icon-theme gnome-applets gnome-applets-data gnome-audio gnome-bluetooth gnome-bluetooth-3-common gnome-boxes gnome-nettool  gnome-screenshot gnome-text-editor gnome-tweaks gnome-software gnome-software-common gnome-software-plugin-snap gnome-mpv 
 
 apt-get install podman -y
 
