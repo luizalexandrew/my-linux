@@ -82,28 +82,37 @@ then
     apt-get install gnome-shell-extension-prefs -y
 fi
 
-echo "- Baixando pacotes DEB"
-echo "? - Em qual usuário os donwloads vão ser realizados?"
-read USER
-DIRETORIO_DOWNLOADS="/home/$USER/Downloads/programas"
 
-URLS_DEB=(
-    "https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb" #Google Chrome
-    "https://release.axocdn.com/linux/GitKraken-v8.1.0.deb"
-    "https://az764295.vo.msecnd.net/stable/c722ca6c7eed3d7987c0d5c3df5c45f6b15e77d1/code_1.65.2-1646927742_amd64.deb" #VSCODE
-)
+echo "? - Instalar Pacotes via Download? s/n"
 
-mkdir "$DIRETORIO_DOWNLOADS"
+read INSTALLDOWNLOADS 
 
-for url_programa in ${URLS_DEB[@]}; do
-    wget -c "$url_programa" -P "$DIRETORIO_DOWNLOADS"
-done
+if [ "$INSTALLDOWNLOADS" == 's' ]
+then
+    echo "- Baixando pacotes DEB"
+    echo "? - Em qual usuário os donwloads vão ser realizados?"
+    read USER
+    DIRETORIO_DOWNLOADS="/home/$USER/Downloads/programas"
 
-## Download e instalaçao de programas externos ##
+    URLS_DEB=(
+        "https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb" #Google Chrome
+        "https://release.axocdn.com/linux/GitKraken-v8.1.0.deb"
+        "https://az764295.vo.msecnd.net/stable/c722ca6c7eed3d7987c0d5c3df5c45f6b15e77d1/code_1.65.2-1646927742_amd64.deb" #VSCODE
+    )
 
-echo "- Instalando pacotes DEB"
+    mkdir "$DIRETORIO_DOWNLOADS"
 
-dpkg -i $DIRETORIO_DOWNLOADS/*.deb
+    for url_programa in ${URLS_DEB[@]}; do
+        wget -c "$url_programa" -P "$DIRETORIO_DOWNLOADS"
+    done
+
+    ## Download e instalaçao de programas externos ##
+
+    echo "- Instalando pacotes DEB"
+
+    dpkg -i $DIRETORIO_DOWNLOADS/*.deb
+fi
+
 
 echo "- Corrigindo dependências"
 
