@@ -55,6 +55,8 @@ echo "(snap-store)"
 snap install snap-store
 echo "(ffmpeg)"
 snap install ffmpeg
+echo "(mysql workbench)"
+snap install mysql-workbench-community
 
 echo "? - Instalar o Gnome Tools? s/n"
 
