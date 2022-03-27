@@ -14,8 +14,6 @@ echo "* Executando Instalações"
 
 echo "- Instalando dependências"
 
-echo "(SNAPD)"
-apt-get install snapd -y
 echo "(BUILD ESSENTIAL)"
 apt install build-essential -y
 
@@ -60,6 +58,13 @@ echo "- Corrigindo dependências"
 apt-get install -f -y
 
 echo "- Instalando SNAPS"
+
+
+echo "(SNAPD)"
+apt-get install snapd -y
+
+systemctl restart snapd snapd.socket
+systemctl daemon-reload
 
 echo "(keepassxc)"
 snap install keepassxc
