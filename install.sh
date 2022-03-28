@@ -93,18 +93,18 @@ echo "(Flatpak)"
 apt install flatpak
 apt install gnome-software-plugin-flatpak
 
-flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo -y
 flatpak install https://flathub.org/repo/appstream/org.gnome.Podcasts.flatpakref -y
 flatpak install flathub org.pitivi.Pitivi -y
-flatpak install flathub org.gnome.Boxes
-flatpak install flathub com.belmoussaoui.Authenticator
-flatpak install flathub de.haeckerfelix.Fragments
-flatpak install flathub org.gaphor.Gaphor
-flatpak install flathub io.github.seadve.Kooha
-flatpak install flathub com.belmoussaoui.Obfuscate
-flatpak install flathub org.gnome.Builder
-flatpak install flathub org.gnome.design.Palette
-flatpak install flathub org.gnome.design.Lorem
+flatpak install flathub org.gnome.Boxes -y
+flatpak install flathub com.belmoussaoui.Authenticator-y
+flatpak install flathub de.haeckerfelix.Fragments -y
+flatpak install flathub org.gaphor.Gaphor -y
+flatpak install flathub io.github.seadve.Kooha -y
+flatpak install flathub com.belmoussaoui.Obfuscate -y
+flatpak install flathub org.gnome.Builder -y
+flatpak install flathub org.gnome.design.Palette -y
+flatpak install flathub org.gnome.design.Lorem -y
 
 
 echo "? - Instalar o Gnome Tools? s/n"
