@@ -27,8 +27,6 @@ echo "(inkscape)"
 apt-get install inkscape -y
 echo "(gimp)"
 apt-get install gimp -y 
-echo "(transmission)"
-apt-get install transmission -y
 echo "(gdebi)"
 apt-get install gdebi -y
 echo "(kdeconnect)"
@@ -52,6 +50,14 @@ apt-get install gnome-session -y
 apt-get install gnome-console -y
 apt-get install gdm3 -y
 apt-get install nautilus -y
+
+
+
+
+apt-get install gnome-system-monitor pitivi -y
+
+
+
 
 #apt-get install -y gnome-applets gnome-applets-data gnome-audio gnome-bluetooth gnome-bluetooth-3-common gnome-boxes gnome-disk-utility gnome-brave-icon-theme gnome-extra-icons  gnome-human-icon-theme gnome-applets gnome-applets-data gnome-audio gnome-bluetooth gnome-bluetooth-3-common gnome-boxes gnome-nettool  gnome-screenshot gnome-text-editor gnome-tweaks gnome-software gnome-software-common gnome-software-plugin-snap gnome-mpv 
 
@@ -82,6 +88,24 @@ echo "(ffmpeg)"
 snap install ffmpeg
 echo "(mysql workbench)"
 snap install mysql-workbench-community
+
+echo "(Flatpak)"
+apt install flatpak
+apt install gnome-software-plugin-flatpak
+
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+flatpak install https://flathub.org/repo/appstream/org.gnome.Podcasts.flatpakref -y
+flatpak install flathub org.pitivi.Pitivi -y
+flatpak install flathub org.gnome.Boxes
+flatpak install flathub com.belmoussaoui.Authenticator
+flatpak install flathub de.haeckerfelix.Fragments
+flatpak install flathub org.gaphor.Gaphor
+flatpak install flathub io.github.seadve.Kooha
+flatpak install flathub com.belmoussaoui.Obfuscate
+flatpak install flathub org.gnome.Builder
+flatpak install flathub org.gnome.design.Palette
+flatpak install flathub org.gnome.design.Lorem
+
 
 echo "? - Instalar o Gnome Tools? s/n"
 
