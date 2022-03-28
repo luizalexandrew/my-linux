@@ -32,11 +32,11 @@ fi
 
 
 
-# echo "? - Quer instalar os NODE e NVM? s/n"
+echo "? - Quer instalar os NODE e NVM? s/n"
 
-# read INSTALARNODE 
+read INSTALARNODE 
 
-# if [ "$INSTALARNODE" == 's' ]
-# then
-#     ./node.sh
-# fi
+if [ "$INSTALARNODE" == 's' ]
+then
+    ./node.sh
+fi
