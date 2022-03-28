@@ -104,7 +104,6 @@ flatpak install flathub org.gaphor.Gaphor -y
 flatpak install flathub io.github.seadve.Kooha -y
 flatpak install flathub com.belmoussaoui.Obfuscate -y
 flatpak install flathub org.gnome.Builder -y
-flatpak install flathub org.gnome.design.Palette -y
 flatpak install flathub org.gnome.design.Lorem -y
 flatpak install flathub com.discordapp.Discord -y
 flatpak install flathub com.visualstudio.code -y
