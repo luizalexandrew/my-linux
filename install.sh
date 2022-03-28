@@ -105,6 +105,12 @@ flatpak install flathub com.belmoussaoui.Obfuscate -y
 flatpak install flathub org.gnome.Builder -y
 flatpak install flathub org.gnome.design.Palette -y
 flatpak install flathub org.gnome.design.Lorem -y
+flatpak install flathub com.discordapp.Discord -y
+flatpak install flathub com.visualstudio.code -y
+flatpak install flathub us.zoom.Zoom -y
+flatpak install flathub md.obsidian.Obsidian -y
+flatpak install flathub io.github.liberodark.OpenDrive -y
+
 
 
 echo "? - Instalar o Gnome Tools? s/n"
