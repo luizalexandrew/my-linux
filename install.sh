@@ -95,6 +95,7 @@ apt install gnome-software-plugin-flatpak
 
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo -y
 flatpak install https://flathub.org/repo/appstream/org.gnome.Podcasts.flatpakref -y
+flatpak install flathub com.github.tchx84.Flatseal
 flatpak install flathub org.pitivi.Pitivi -y
 flatpak install flathub org.gnome.Boxes -y
 flatpak install flathub com.belmoussaoui.Authenticator-y
