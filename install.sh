@@ -49,11 +49,11 @@ apt-get install build-essential cmake cmake-data autoconf automake pkg-config li
 echo "- Instalando GNOME Vanilha"
 
 apt-get install gnome-session -y
-apt-get install gnome-terminal -y
+apt-get install gnome-console -y
 apt-get install gdm3 -y
 apt-get install nautilus -y
 
-apt-get install -y gnome-applets gnome-applets-data gnome-audio gnome-bluetooth gnome-bluetooth-3-common gnome-boxes gnome-disk-utility gnome-brave-icon-theme gnome-extra-icons  gnome-human-icon-theme gnome-applets gnome-applets-data gnome-audio gnome-bluetooth gnome-bluetooth-3-common gnome-boxes gnome-nettool  gnome-screenshot gnome-text-editor gnome-tweaks gnome-software gnome-software-common gnome-software-plugin-snap gnome-mpv 
+#apt-get install -y gnome-applets gnome-applets-data gnome-audio gnome-bluetooth gnome-bluetooth-3-common gnome-boxes gnome-disk-utility gnome-brave-icon-theme gnome-extra-icons  gnome-human-icon-theme gnome-applets gnome-applets-data gnome-audio gnome-bluetooth gnome-bluetooth-3-common gnome-boxes gnome-nettool  gnome-screenshot gnome-text-editor gnome-tweaks gnome-software gnome-software-common gnome-software-plugin-snap gnome-mpv 
 
 apt-get install podman -y
 
