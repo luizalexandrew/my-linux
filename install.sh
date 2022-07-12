@@ -43,6 +43,7 @@ apt-get --install-suggests install libssl-dev net-tools arc arj cabextract lhasa
 apt-get install gzip tar -y
 
 apt-get install build-essential cmake cmake-data autoconf automake pkg-config libtool libzip-dev libxml2-dev libsigc++-2.0-dev libglade2-dev libglu1-mesa-dev libgl1-mesa-glx mesa-common-dev libmysqlclient-dev libmysqlcppconn-dev uuid-dev libpixman-1-dev libpcre3-dev libpango1.0-dev libcairo2-dev python-dev libboost-dev mysql-client python-pysqlite2 libsqlite3-dev swig libvsqlitepp-dev libgdal-dev libgtk-3-dev libgtkmm-3.0-dev libssl-dev libsecret-1-dev libproj-dev
+apt install build-essential -y
 
 echo "- Instalando GNOME Vanilha"
 
@@ -95,6 +96,7 @@ apt install gnome-software-plugin-flatpak
 
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo -y
 flatpak install https://flathub.org/repo/appstream/org.gnome.Podcasts.flatpakref -y
+flatpak install flathub
 flatpak install flathub com.github.tchx84.Flatseal
 flatpak install flathub org.pitivi.Pitivi -y
 flatpak install flathub org.gnome.Boxes -y
@@ -121,6 +123,18 @@ if [ "$INSTALLGNOMETOOLS" == 's' ]
 then
     echo "(gnome-tweak-tool)"
     apt-get install gnome-shell-extension-prefs -y
+fi
+
+echo "? - Instalar o Nvidia? s/n"
+
+read INSTALLNVIDIA 
+
+if [ "$INSTALLNVIDIA" == 's' ]
+then
+    echo "(nvidia)"
+    apt install nvidia-detect -y
+    nvidia-detect
+    apt install nvidia-driver -y
 fi
 
 
