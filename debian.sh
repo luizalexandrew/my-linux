@@ -42,3 +42,7 @@ apt-get dist-upgrade -y
 echo "- Atualizando pacotes"
 apt-get upgrade -y
 
+echo "- Removendo pacotes desnecessários"
+
+apt-get autoremove gnome-gam*
+apt-get autoremove evolution
