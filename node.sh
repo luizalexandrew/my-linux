@@ -7,6 +7,7 @@ curl -sL https://deb.nodesource.com/setup_16.x -o nodesource_setup.sh
 chmod +x nodesource_setup.sh
 bash nodesource_setup.sh
 apt install nodejs
+apt install npm
 node -v
 apt install build-essential -y
 
