@@ -89,7 +89,9 @@ echo "(ffmpeg)"
 snap install ffmpeg
 echo "(mysql workbench)"
 snap install mysql-workbench-community
-
+echo "(Podman)"
+sudo apt-get -y install podman
+pip3 install podman-compose
 echo "(Flatpak)"
 apt install flatpak
 apt install gnome-software-plugin-flatpak
