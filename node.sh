@@ -3,7 +3,7 @@
 # #https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-debian-10
 
 apt-get install curl -y
-curl -sL https://deb.nodesource.com/setup_16.x -o nodesource_setup.sh
+curl -sL https://deb.nodesource.com/setup_18.x -o nodesource_setup.sh
 chmod +x nodesource_setup.sh
 bash nodesource_setup.sh
 apt install nodejs
